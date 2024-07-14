@@ -1,0 +1,293 @@
+* {
+    color: #fff
+}
+
+body {
+    background-color: #0D0D0D;
+    overflow: hidden;
+}
+
+.nav-footer i {
+    color: #fff;
+}
+
+.rightSide i {
+    color: #000;
+}
+
+li,
+i {
+    cursor: pointer;
+}
+
+.links li {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    width: fit-content;
+}
+
+.links li:hover {
+    color: rgb(23, 34, 187);
+}
+
+.left-side {
+    background-color: #0D0D0D;
+}
+
+.logo {
+    width: 50px;
+}
+
+.loading {
+    position: fixed;
+    z-index: 9999;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerLoad {
+    position: fixed;
+    z-index: 99;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav {
+    z-index: 999;
+}
+
+.meal {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 105%;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: top 0.4s;
+}
+
+.meal:hover .layer {
+    top: 0;
+}
+
+.meal img {
+    width: 100%;
+    transition: transform 0.4s;
+}
+
+.meal:hover img {
+    transform: scale(1.08);
+}
+
+
+/*instructions*/
+
+.dashed-line {
+    border-top: 1px dashed beige;
+    width: 100%;
+    margin-block: 20px;
+}
+
+#instructions .instructionsHead {
+    border-bottom: 3px solid beige;
+    border-right: 3px solid beige;
+    width: fit-content;
+    color: beige;
+    padding-right: 5px;
+}
+
+#instructions h3 {
+    font-size: 24px;
+}
+
+#instructions h3 span,
+.recipes {
+    color: beige;
+}
+
+#instructions ul li {
+    margin: 7px;
+    background-color: rgb(110, 105, 105);
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tags {
+    margin-top: 30px;
+}
+
+.ingredIcon {
+    font-size: 50px;
+}
+
+.myArea,
+.myIngred {
+    cursor: pointer;
+}
+
+.tags span {
+    background-color: rgb(196, 149, 149);
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+#instructions .mybtn {
+    background-color: #fff;
+    color: #000;
+}
+
+#instructions .mybtn:hover {
+    background-color: rgb(212, 201, 201);
+}
+
+
+/*loading*/
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+
+/* search */
+
+::placeholder {
+    color: rgb(194, 188, 188) !important;
+}
+
+.no-shadow {
+    position: relative;
+    z-index: 99;
+}
+
+.no-shadow:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.contact label {
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #f8f9fa;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact .form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.contact p {
+    color: red;
+    font-size: 14px;
+    padding: 3px 0;
+    margin: 0;
+}
+
+.buttn .btnsuccss {
+    color: rgb(37, 211, 37);
+}
